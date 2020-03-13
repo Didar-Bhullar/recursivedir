@@ -1,0 +1,7 @@
+name              'test'
+maintainer        'Didar Bhullar'
+maintainer_email  'didar.s.bhullar@gmail.com'
+license           'Apache-2.0'
+description       'Testing cookbook for recursivedir'
+version           '0.1.0'
+depends           'recursivedir'
