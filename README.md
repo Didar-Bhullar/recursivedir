@@ -1,5 +1,5 @@
 # recursivedir
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Build Status](https://travis-ci.com/Didar-Bhullar/recursivedir.svg?branch=master)](https://travis-ci.com/Didar-Bhullar/recursivedir) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
 This cookbook provides a resource for recurisvely creating directories where each directory gets the specified mode, owner, and group instead of just the last leaf. This resource is a wrapper around the `directory` resource.
