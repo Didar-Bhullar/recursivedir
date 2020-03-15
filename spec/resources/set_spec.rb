@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'recursivedir_set' do
   step_into :recursivedir_set
-  platforms = %w(ubuntu mac_os_x)
+  platforms = %w(ubuntu)
 
   platforms.each do |platform|
     platform platform
