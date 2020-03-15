@@ -1,0 +1,37 @@
+branches:
+  only:
+    - master
+    - dev
+
+sudo: required
+
+addons:
+  apt:
+    sources:
+      - chef-stable-trusty
+    packages:
+      - chefdk
+
+# Don't `bundle install` which takes about 1.5 mins
+install: echo "skip bundle install"
+
+services: docker
+
+env:
+  matrix:
+  - INSTANCE=set-debian-8
+  - INSTANCE=set-debian-9
+  - INSTANCE=set-centos-7
+  - INSTANCE=set-ubuntu-1604
+
+before_script:
+  - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
+  - eval "$(chef shell-init bash)"
+  - export CHEF_LICENSE=accept
+  - chef --version
+  - cookstyle --version
+  - foodcritic --version
+  - chef exec rake style_and_spec
+
+script: 
+  - KITCHEN_LOCAL_YAML=kitchen.dokken.yml kitchen verify ${INSTANCE}
