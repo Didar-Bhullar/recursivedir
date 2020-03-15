@@ -7,7 +7,7 @@ license             'Apache-2.0'
 description         'Light wrapper around the directory resource for truley recursive builds.'
 long_description    'Each directory gets the specified mode, owner, and
                      group instead of just the last leaf.'
-version             '0.1.0'
+version             '1.0.0'
 chef_version        '>= 14.0'
 
 supports 'debian'

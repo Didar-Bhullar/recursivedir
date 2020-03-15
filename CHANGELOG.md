@@ -1,11 +1,6 @@
-# recursivedir CHANGELOG
+# recursivedir Cookbook Changelog
 
-This file is used to list changes made in each version of the recursivedir cookbook.
+## [1.0.0] - 2020-03-15
 
-# 0.1.0
-
-Initial release.
-
-- change 0
-- change 1
+- Intial release
 
