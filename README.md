@@ -21,7 +21,7 @@ The following platforms and versions are tested and supported using test-kitchen
 This cookbook provides the `recusrivedir_set` resource. To use just add the <br> 
 following line to your metadata file: <br>
 `depends 'recursivedir'`<br>
-```
+```ruby
 # example 1
 recursivedir_set '/tmp/dir1/dir2/dir3' do
   owner 'root'
@@ -37,8 +37,8 @@ end
 ## Properties
 These three properties are the exact same properties from the `directory` resource. <br>
 Directory documentation link [here](https://docs.chef.io/resources/directory/).
-| Property  | Type | Description |
-| ------------- | ------------- | ----------- |
-| owner  | String, Integer  | A string or ID that identifies the group owner by user name, including fully qualified user names such as domain\user or user@domain. If this value is not specified, existing owners remain unchanged and new owner assignments use the current user (when necessary). |
-| group  | String, Integer  | A string or ID that identifies the group owner by group name, including fully qualified group names such as domain\group or group@domain. If this value is not specified, existing groups remain unchanged and new group assignments use the default POSIX group (if available). |
-| mode  | String, Integer  | A quoted 3-5 character string that defines the octal mode that is passed to chmod. For example: '755', '0755', or 00755. If the value is specified as a quoted string, it works exactly as if the chmod command was passed. If the value is specified as an integer, prepend a zero (0) to the value to ensure that it is interpreted as an octal number. For example, to assign read, write, and execute rights for all users, use '0777' or '777'; for the same rights, plus the sticky bit, use 01777 or '1777' |
+| Property  | Type          | Description 
+| --------- | ------------- | ----------- 
+| owner  | String, Integer  | A string or ID that identifies the group owner by user name, including fully qualified user names such as domain\user or user@domain. If this value is not specified, existing owners remain unchanged and new owner assignments use the current user (when necessary). 
+| group  | String, Integer  | A string or ID that identifies the group owner by group name, including fully qualified group names such as domain\group or group@domain. If this value is not specified, existing groups remain unchanged and new group assignments use the default POSIX group (if available). 
+| mode  | String, Integer  | A quoted 3-5 character string that defines the octal mode that is passed to chmod. For example: '755', '0755', or 00755. If the value is specified as a quoted string, it works exactly as if the chmod command was passed. If the value is specified as an integer, prepend a zero (0) to the value to ensure that it is interpreted as an octal number. For example, to assign read, write, and execute rights for all users, use '0777' or '777'; for the same rights, plus the sticky bit, use 01777 or '1777' 
